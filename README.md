@@ -81,12 +81,14 @@ portfolio-website/
 3. Run the index.html file.
    
 ▶️ Usage
+
 Navigate through different sections of the portfolio.
 Toggle between Dark/Light modes.
 Explore the showcased projects.
 Use the contact form to send a message (with validation).
 
 📈 Results
+
 Fully responsive personal portfolio website.
 Provides a professional platform to showcase skills and projects.
 Interactive UI with smooth animations and transitions.
