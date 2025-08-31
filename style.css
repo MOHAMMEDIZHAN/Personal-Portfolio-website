@@ -1,0 +1,213 @@
+/**** Google Font (because, you know, we all want our sites to look fancy) ****/
+body {
+  font-family: 'Poppins', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+/*** Navbar — sticky like that old gum under your desk ***/
+header {
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+}
+.nav-links a:hover {
+  color: #00adb5;
+}
+#darkToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*** Main Sections — big and bold, like your dreams ***/
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.home-section {
+  background: url('assets/images/BackgroundImage.jpg') no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home-section h1 span {
+  color: #00adb5;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00adb5;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background .3s;
+}
+.btn:hover {
+  background: #007b7f;
+}
+
+/*** Project Cards — gotta show off those skills, right? ***/
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/*** Contact Form — keep it tidy, keep it chill ***/
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+form button {
+  padding: 10px;
+  background: #00adb5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #007b7f;
+}
+
+/*** Success Message — oh snap, you did it! ***/
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+/*** Fade in, fade out, like my motivation on Mondays ***/
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(10px);}
+  10%  { opacity: 1; transform: translateY(0);}
+  90%  { opacity: 1; transform: translateY(0);}
+  100% { opacity: 0; transform: translateY(-10px);}
+}
+
+/*** Footer — no, you can’t skip this part ***/
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+#scrollTop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #00adb5;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*** Dark Mode, aka ‘Night Owl’ mode ***/
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+.dark-mode header,
+.dark-mode footer {
+  background: #000;
+}
+
+/* You want readable headings, right? */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a {
+  color: #eee;
+}
+
+/* Navbar stays visible in the dark too */
+.dark-mode .nav-links a {
+  color: #eee;
+}
+.dark-mode .nav-links a:hover {
+  color: #00adb5;
+}
+
+/* Cards go goth */
+.dark-mode .card {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+.dark-mode .card a {
+  color: #00adb5;
+}
+
+/* Forms, but make it midnight */
+.dark-mode form input,
+.dark-mode form textarea {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #444;
+}
+.dark-mode form button {
+  background: #007b7f;
+}
+.dark-mode form button:hover {
+  background: #00adb5;
+}
