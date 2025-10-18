@@ -12,10 +12,12 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo">Izhan</div>
+      <div class="logo">Portfolio</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#academics">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -28,64 +30,120 @@
     <!-- Home Section -->
     <section id="home" class="home-section">
         <div class="intro">
-            <h1>Hello, I'm <span>Mohammed Izhan</span></h1>
+            <h1>Hello, I'm <span>K Mohammed Izhan</span></h1>
             <p><span id="typing"></span></p>
+            <div class="home-buttons">
             <a href="#projects" class="btn">View My Work</a>
+            <a href="assets/Resume/Izhan_Resume.pdf" target="_blank" class="btn btn-outline">Download CV</a>
+          </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <h2>About Me</h2>
-        <p>Alright, so here’s the deal—I’m Mohammed Izhan. I’m out here trying to make sense of business chaos as an aspiring Business Analyst. Basically, I geek out over turning messy, complicated problems into stuff that actually makes sense (and works). I’m all about digging into data, drawing up processes, and chatting with folks to figure out what’s really needed. I mess around with SQL, Excel, Tableau, and Python—yeah, a bit of a tech nerd—just to squeeze the right insights out of all that number soup. I’ve spent time connecting the dots between what people want and what tech can do. Got some chops in Agile, SDLC, and writing up docs that don’t put everyone to sleep. Toss me in a team where business and tech collide, and I’m in my element. Hungry to jump into projects that matter, bridge the business–tech gap, and, honestly, learn as much as possible while I’m at it.</p>
+        <div class="about-content">
+            <img src="assets/images/ProfilePhoto.jpg" alt="Profile Photo" class="profile-photo">
+            <p>👋 Hi, I’m Mohammed Izhan — an aspiring Business Analyst passionate about transforming complex business challenges into clear, actionable solutions. I thrive on analyzing data, optimizing processes, and collaborating with cross-functional teams to uncover what truly drives business value.
+            I work with tools like SQL, Excel, Tableau, and Python to extract insights from data and turn them into meaningful outcomes. With a strong understanding of Agile methodologies, SDLC, and effective documentation, I aim to bridge the gap between business needs and technical execution.
+            Curious by nature and driven by impact, I’m eager to contribute to projects where business strategy meets technology, helping organizations make data-driven decisions and improve performance while continuously learning and growing in the process.</p>
+        </div>
     </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="academics-section">
+        <h2>My Academics</h2>
+        <div class="academics-cards">
+            <div class="academic-card">
+                <img src="assets/images/TAWLogo.png" alt="High School Logo">
+                <h3>TAW School</h3>
+                <p>2007 - 2021</p>
+                <p>Completed primary, secondary and high school education focusing on the domain of Science which included Physics, Chemistry, Mathematics and Computer Science.</p>
+            </div>
+            <div class="academic-card">
+                <img src="assets/images/VITLogo.png" alt="University Logo">
+                <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                <p>VIT University, 2021 - 2025</p>
+                <p>Focused Object-Oriented Programming(Java), Database Management Systems(DBMS), Operating Systems, Computer Networks, Software Engineering and SDLC, Cloud Computing (Google Cloud)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>My Experience</h2>
+        <div class="experience-card animate-on-scroll">
+            <img src="assets/images/6OriginLogo.jpeg" alt="6Origin Logo" class="company-logo">
+            <div class="experience-details">
+                <h3>Software Engineer Intern <span>(Sept 2025 - Oct 2025)</span></h3>
+                <h4>6Origin</h4>
+                <ul>
+                    <li>Enhanced and optimized a React.js + Vite-based e-commerce platform enabling over 1,000+ handmade product listings and seamless vendor–buyer interactions.</li>
+                    <li>Engineered dynamic authentication modules (Login/Register) using React Hook Form, React Router, and Toastify for enhanced user experience.</li>
+                    <li>Collaborated on integrating RESTful APIs and state management to ensure smooth data flow across product, dashboard, and user modules.</li>
+                    <li>Improved frontend performance and build speed by 30% through optimized routing, component reusability, and Vite bundling.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
      <section id="projects" class="projects-section">
         <h2>Projects</h2>
         <div class="project-cards">
-            <div class="card">
-                <img src="assets/images/EmployeeAttritionAnalysis.png" alt="Project 1">
-                <h3>Employee Attrition Analysis</h3>
-                <p>Whipped up this interactive Tableau dashboard to break down employee attrition, department by department and all that jazz. Dug into a bunch of HR stats—think: who’s leaving, what age, what role, and so on—just to see what’s really going on with retention. You could mess with filters, compare attrition rates, and peek at some KPIs, making it actually useful for HR folks (and not just another boring chart). It’s a mix of storytelling and straight-up number crunching—helped pull out some real insights from a sea of workforce data.</p>
-                <a href="https://public.tableau.com/app/profile/mohammed.izhan6570/viz/Project-1HRAnalyticsDashboard/HRAnalyticsDashboard">View Project</a>
+          <div class="card">
+                <img src="assets/images/JetEngine.jpg" alt="Project 1">
+                <h3>Hybrid CNN-Attention Model for Predicting Jet Engine Failures</h3> 
+                <p>Built a CNN-based RUL prediction system for aircraft engines using NASA’s CMAPSS dataset. Developed a hybrid 1D CNN with temporal attention and asymmetric loss, improving accuracy by 18% RMSE and reducing late predictions by 35% through EDA-based feature selection and adaptive normalization.</p>
+                <a href="https://github.com/MOHAMMEDIZHAN/Hybrid-CNN-Attention-Model-for-Predicting-Jet-Engine-Failures" class="btn">View Project</a>
             </div>
             <div class="card">
-                <img src="assets/images/GlobalEducationTrends.png" alt="Project 2">
+                <img src="assets/images/RetailInsightsPipeline.png" height="330" alt="Project 2">
+                <h3>Retail-Insights-Pipeline</h3>
+                <p> Developed a Retail Revenue Analysis system processing 100K+ transaction records to analyze product performance and sales trends. Built an end-to-end data pipeline using Python, MySQL, and Tableau, converting raw retail data into actionable business insights. Engineered 2 SQL views and 5 analytical queries to calculate gross sales, net revenue, and product rankings, improving query performance by 30%.</p>
+                <a href="https://github.com/MOHAMMEDIZHAN/Retail-Insights-Pipeline" class="btn">View Project</a>
+            </div>
+            <div class="card">
+                <img src="assets/images/EmployeeAttritionAnalysis.png" alt="Project 3">
+                <h3>Employee Attrition Analysis</h3>
+                <p> Built an interactive HR Analytics Dashboard in Tableau to track attrition across departments, highlighting high-turnover areas. Identified top 3 drivers of churn (tenure, department, age), with insights supporting potential 20–25% attrition reduction. Found employees with < 2 years tenure had 2× higher attrition, guiding HR to focus on early-stage retention. Analyzed seasonal attrition trends, helping predict and prepare for 10–15% shifts in retention.</p>
+                <a href="https://public.tableau.com/app/profile/mohammed.izhan6570/viz/Project-1HRAnalyticsDashboard/HRAnalyticsDashboard" class="btn">View Project</a>
+            </div>
+            <div class="card">
+                <img src="assets/images/GlobalEducationTrends.png" height="275" alt="Project 4">
                 <h3>Global Education Trends</h3>
-                <p>Built a dashboard in Tableau to make sense of global education stats, because who doesn’t love a good map or a bubble chart? Looked at stuff like gender gaps in primary education, youth literacy across countries, school dropouts, and even how school enrollment ties into unemployment. Played around with visualizations—maps, bubbles, scatter plots—to show how things stack up between countries and over the years. Made the data actually talk, not just sit there looking pretty.</p>
-                <a href="https://public.tableau.com/app/profile/mohammed.izhan6570/viz/GlobalEducationAnalysis_17540699809240/Dashboard1">View Project</a>
+                <p>Visualized global education indicators (literacy rates, enrollment, gender parity) across 50+ countries, highlighting regions where female literacy remains 20–25% lower than male rates. Mapped trends over 10 years to show average global primary school enrollment increased by ~15%, while secondary school enrollment lagged by 10%.
+                Built using Tableau & Excel, enabling interactive, data-driven insights for global education trends.
+                </p>
+                <a href="https://public.tableau.com/app/profile/mohammed.izhan6570/viz/GlobalEducationAnalysis_17540699809240/Dashboard1" class="btn">View Project</a>
             </div>
         </div>
     </section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-  <!-- Success Message -->
-   <div id="successMessage" class="success-message">✅ Message Sent! Thanks for reaching out.</div>
+  <h2>Get in Touch</h2>
+  <p class="contact-text">Let’s connect to collaborate on innovative projects, share ideas, or explore new opportunities together.</p>
+  
+  <div class="contact-icons">
+  <a href="mailto:izhan1033@gmail.com" target="_blank" class="contact-icon">
+    <img src="assets/images/Envelope.png" alt="Email">
+  </a>
+  <a href="https://www.linkedin.com/in/mohammed-izhan-/" target="_blank" class="contact-icon">
+    <img src="assets/images/linkedin.svg" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/MOHAMMEDIZHAN" target="_blank" class="contact-icon">
+    <img src="assets/images/github.svg" alt="GitHub">
+  </a>
+</div>
 </section>
-  </main>
+</main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Izhan | Made with ❤️</p>
+    <p>© 2025 K Mohammed Izhan. All rights reserved.</p>
     <button id="scrollTop">⬆️</button>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("TZKE8WH75Tpo406Rg"); // Replace with your Public Key
-    })();
-  </script>
-  <script src="script.js"></script>
-
   <script src="script.js"></script>
 </body>
 </html>
