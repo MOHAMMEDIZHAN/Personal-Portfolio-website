@@ -76,7 +76,7 @@ portfolio-website/
 1. Clone the repository:  
    ```bash
    git clone https://github.com/MOHAMMEDIZHAN/Personal Portfolio-website.git
-   cd Personal Portfolio-website
+   cd Personal-Portfolio-website
 2. Open index.html in your browser.
 3. Run the index.html file.
    
