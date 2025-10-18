@@ -38,31 +38,3 @@ const scrollTopBtn = document.getElementById('scrollTop');
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-// Form Validation (because people just love leaving stuff blank)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  // Debug logs, feel free to roast yourself later
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Message:", message);
-
-  if (!name || !email || !message) {
-    alert("All fields are required!");
-    return;
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  alert("Message sent successfully!");
-  this.reset();
-});
