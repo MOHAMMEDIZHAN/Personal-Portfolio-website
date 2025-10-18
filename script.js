@@ -66,37 +66,3 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   alert("Message sent successfully!");
   this.reset();
 });
-
-// Contact Form with EmailJS (double the fun, double the submit, right?)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !email || !message) {
-    alert("All fields are required!");
-    return;
-  }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  // EmailJS because SMTP is so last decade
-  email.send("service_uq0h3dq", "template_ggcj9xe", {
-      from_name: name,
-      from_email: email,
-      message: message,
-      to_email: "izhan1033@gmail.com"
-  })
-  .then(() => {
-      alert("Message sent successfully!");
-      this.reset();
-  }, (error) => {
-      console.error("Email failed:", error);
-      alert("Oops! Something went wrong. Please try again.");
-  });
-});
