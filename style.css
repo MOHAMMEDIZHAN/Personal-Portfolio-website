@@ -16,6 +16,7 @@ header {
   padding: 10px 20px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 .navbar {
   display: flex;
@@ -75,11 +76,105 @@ section {
   background: #007b7f;
 }
 
+/* === ABOUT SECTION === */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00adb5;
+}
+
+
+/* === ACADEMICS SECTION === */
+.academics-section {
+  background: #f2f2f2;
+  padding: 60px 20px;
+}
+
+.academics-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.academic-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.academic-card img {
+  width: 180px;
+  height: 90px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* === EXPERIENCE SECTION === */
+.experience-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.experience-details {
+  max-width: 700px;
+  text-align: left;
+}
+
+.experience-details h3 {
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.experience-details ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.experience-details li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
 /*** Project Cards — gotta show off those skills, right? ***/
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  justify-items: center;
+  align-items: stretch;
 }
 .card {
   background: #fff;
@@ -87,6 +182,8 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform .3s;
+  width: 100%;
+  max-width: 500px; /* keeps them from stretching too wide */
 }
 .card:hover {
   transform: translateY(-10px);
@@ -95,7 +192,12 @@ section {
   width: 100%;
   border-radius: 5px;
 }
-
+/* Responsive: On small screens show one card per row */
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
 /*** Contact Form — keep it tidy, keep it chill ***/
 form {
   display: flex;
@@ -122,17 +224,6 @@ form button:hover {
   background: #007b7f;
 }
 
-/*** Success Message — oh snap, you did it! ***/
-.success-message {
-  display: none;
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: #4caf50;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 500;
-  animation: fadeInOut 4s ease-in-out forwards;
-}
 
 /*** Fade in, fade out, like my motivation on Mondays ***/
 @keyframes fadeInOut {
@@ -198,6 +289,49 @@ footer {
   color: #00adb5;
 }
 
+/* DARK MODE FOR ACADEMICS & EXPERIENCE SECTIONS */
+
+/* Academics section cards */
+.dark-mode .academics-section {
+  background: #121212;
+}
+
+.dark-mode .academic-card {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+.dark-mode .academic-card h3,
+.dark-mode .academic-card p {
+  color: #eee;
+}
+
+/* Experience section */
+.dark-mode .experience-section {
+  background: #121212;
+}
+
+.dark-mode .experience-card {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
+}
+
+.dark-mode .experience-details h3,
+.dark-mode .experience-details h4,
+.dark-mode .experience-details li {
+  color: #eee;
+}
+
+.dark-mode .company-logo {
+  filter: brightness(0.9);
+}
+/* Project Cards buttons */
+.dark-mode .project-cards a.btn{
+  color: #eee;
+}
+
 /* Forms, but make it midnight */
 .dark-mode form input,
 .dark-mode form textarea {
@@ -210,4 +344,117 @@ footer {
 }
 .dark-mode form button:hover {
   background: #00adb5;
+}
+
+/* === New Contact Section === */
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.contact-text {
+  color: #6b7280;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #e0e7ff;
+  color: #1e293b;
+  border-radius: 50%;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+  background: #000000;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Dark Mode Compatibility */
+.dark-mode .contact-section {
+  background: #121212;
+}
+
+.dark-mode .contact-section h2 {
+  color: #eee;
+}
+
+.dark-mode .contact-text {
+  color: #ccc;
+}
+
+.dark-mode .contact-icon {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode .contact-icon:hover {
+  background: #02e12b;
+  color: #fff;
+}
+
+.contact-icon img {
+  width: 28px;
+  height: 28px;
+  filter: invert(20%) sepia(20%) saturate(200%) hue-rotate(180deg);
+  transition: filter 0.3s;
+}
+
+.contact-icon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* === Home Buttons Styling === */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Outline version of the main button */
+.btn-outline {
+  background: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.btn-outline:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/* Dark mode fix */
+.dark-mode .btn-outline {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.dark-mode .btn-outline:hover {
+  background: #ffffff;
+  color: #000000;
 }
