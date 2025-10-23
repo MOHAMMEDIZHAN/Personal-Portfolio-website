@@ -92,3 +92,5 @@ Use the contact form to send a message (with validation).
 Fully responsive personal portfolio website.
 Provides a professional platform to showcase skills and projects.
 Interactive UI with smooth animations and transitions.
+
+Live Demo: https://mohammedizhan.netlify.app/
